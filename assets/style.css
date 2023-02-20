@@ -1,0 +1,139 @@
+/* --------------- */
+/* Global Stylings */
+/* --------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */ /*debugging */
+    font-family: monospace
+}
+
+body {
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+
+}
+
+p {
+    font-size: 1.3em;
+}
+
+li {
+    list-style: none;
+}
+
+/* button {
+    outline: none;
+    color: purple;
+    background-color: white;
+    font-size: 1.3em;
+} */
+
+/* --------------- */
+/* Outer Container */
+/* --------------- */
+
+.flex-parent-outer-container {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+}
+
+/* ----------------- */
+/* Top Bar Container */
+/* ----------------- */
+
+.top-bar-container button {
+    border: none;
+    color: purple;
+    background-color: white;
+    font-size: 1.3em;
+}
+
+.top-bar-container p {
+    float: right;
+}
+
+/* -------------- */
+/* Main Quiz Body */
+/* -------------- */
+
+.main-quiz-container {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: green; */ /*debugging */
+}
+
+/* ----------------- */
+/* Quiz Intro Header */
+/* ----------------- */
+
+.quiz-intro, main {
+    margin-bottom: 30vh;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.quiz-intro {
+    display: none;
+}
+
+.quiz-intro p {
+    text-align: center;
+}
+
+.quiz-intro button {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(113, 45, 181);
+}
+
+/* ----------------- */
+/* Main Quiz Content */
+/* ----------------- */
+
+main {
+    display: block;
+}
+
+.quiz-questions button {
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(113, 45, 181);
+}
+
+/* -------------- */
+/* Quiz Questions */
+/* -------------- */
+
+.quiz-questions {
+    display: block;
+}
+
+/* --------------- */
+/* Quiz End Screen */
+/* --------------- */
+
+.quiz-end {
+    display: none;
+}
+
+/* ------------------ */
+/* High Scores Screen */
+/* ------------------ */
+
+.highscores {
+    display: none;
+}
