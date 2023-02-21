@@ -104,9 +104,9 @@ li {
 /* Main Quiz Content */
 /* ----------------- */
 
-main {
-    display: block;
-}
+/* -------------- */
+/* Quiz Questions */
+/* -------------- */
 
 .quiz-questions button {
     border-radius: 5px;
@@ -114,27 +114,41 @@ main {
     background-color: rgb(113, 45, 181);
 }
 
-/* -------------- */
-/* Quiz Questions */
-/* -------------- */
-
-.quiz-questions {
+/* .quiz-questions {
     display: block;
-}
+} */
 
 /* --------------- */
 /* Quiz End Screen */
 /* --------------- */
 
-.quiz-end {
-    display: none;
+.submit-btn {
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(113, 45, 181);
 }
 
 /* ------------------ */
 /* High Scores Screen */
 /* ------------------ */
 
-.highscores {
+/* ------------- */
+/* Miscellaneous */
+/* ------------- */
+
+.visible {
+    display: block;
+}
+
+.hidden {
     display: none;
 }
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* .btn[disabled]:hover {
+    cursor: not-allowed;
+} */
 

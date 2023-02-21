@@ -23,57 +23,57 @@
 
         <!-- Top Bar -->
         <div class="top-bar-container">
-            <button>View High Scores</button>
+            <button class="btn">View High Scores</button>
             <!-- Generated in JavaScript -->
-            <p>Timer: 00:00</p>
+            <p>Timer: <span id="timer"></span></p>
         </div>
 
         <!-- Main Quiz Body-->
         <div class="main-quiz-container">
 
             <!-- Quiz Intro -->
-            <header class="quiz-intro">
+            <header class="quiz-intro visible">
                 <h1>Coding Quiz Challenge</h1>
                 <p>Try to answer the following code-related questions within the time limit. 
                     Keep in mind that any incorrect answers will penalize your score and time 
                     by ten seconds.
                 </p>
-                <button>Start Quiz</button>
+                <button class="btn" id="startQuiz">Start Quiz</button>
             </header>
 
             <!-- Main Quiz Content -->
-            <main>
+            <main class="visible">
 
-                <section class="quiz-questions">
+                <section class="quiz-questions hidden">
                     <h2 id="questionsArr">Question Here</h2>
                     <ul>
                         <!-- Generated in JavaScript -->
-                        <li><button>Answer 1</button></li>
-                        <li><button>Answer 2</button></li>
-                        <li><button>Answer 3</button></li>
-                        <li><button>Answer 4</button></li>
+                        <li><button class="answerBtn">Answer 1</button></li>
+                        <li><button class="answerBtn">Answer 2</button></li>
+                        <li><button class="answerBtn">Answer 3</button></li>
+                        <li><button class="answerBtn">Answer 4</button></li>
                     </ul>
                 </section>
 
-                <section class="quiz-end">
+                <section class="quiz-end hidden">
                     <h2>All done!</h2>
                     <!-- Generated in JavaScript -->
-                    <p> Your final score is: 00</p>
+                    <p> Your final score is: <span id="finalScore"></span></p>
                     <form>
                         <label for="">Enter initials:</label>
                         <input type="text">
-                        <button>Submit</button>
+                        <button class="submit-btn">Submit</button>
                     </form>
                 </section>
 
-                <section class="highscores">
+                <section class="high-scores hidden">
                     <h2>High Scores</h2>
                     <ol>
                         <!-- Generated in JavaScript -->
                         <li>MR - 20</li>
                     </ol>
-                    <button>Go Back</button>
-                    <button>Clear High Scores</button>
+                    <button class="btn">Go Back</button>
+                    <button class="btn">Clear High Scores</button>
                 </section>
 
             </main>
