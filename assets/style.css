@@ -16,7 +16,6 @@ body {
 
 h1, h2 {
     text-align: center;
-
 }
 
 p {
@@ -27,12 +26,12 @@ li {
     list-style: none;
 }
 
-/* button {
+button {
     outline: none;
-    color: purple;
-    background-color: white;
+    color: white;
+    background-color: rgb(113, 45, 181);
     font-size: 1.3em;
-} */
+}
 
 /* --------------- */
 /* Outer Container */
@@ -52,7 +51,7 @@ li {
 
 .top-bar-container button {
     border: none;
-    color: purple;
+    background-color: rgb(113, 45, 181);
     background-color: white;
     font-size: 1.3em;
 }
@@ -114,23 +113,37 @@ li {
     background-color: rgb(113, 45, 181);
 }
 
-/* .quiz-questions {
-    display: block;
-} */
+.quiz-questions button:hover {
+    cursor: pointer;
+}
 
 /* --------------- */
 /* Quiz End Screen */
 /* --------------- */
 
-.submit-btn {
+#submit-btn {
     border-radius: 5px;
     color: white;
     background-color: rgb(113, 45, 181);
 }
 
+#submit-btn:hover {
+    cursor: pointer;
+}
+
 /* ------------------ */
 /* High Scores Screen */
 /* ------------------ */
+
+#view-scores-btn {
+    outline: none;
+    color: rgb(113, 45, 181);
+    font-size: 1.3em;
+}
+
+#view-scores-btn:hover {
+    cursor: pointer;
+}
 
 /* ------------- */
 /* Miscellaneous */
@@ -147,8 +160,4 @@ li {
 .btn:hover {
     cursor: pointer;
 }
-
-/* .btn[disabled]:hover {
-    cursor: not-allowed;
-} */
 

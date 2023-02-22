@@ -7,8 +7,10 @@ const timer = document.querySelector('#timer');
 const answerBtn = document.querySelectorAll('.answerBtn');
 const quizEnd = document.querySelector('.quiz-end');
 const finalScore = document.querySelector('#finalScore');
-const submitScoreBtn = document.querySelector('.submit-btn');
+const submitScoreBtn = document.querySelector('#submit-btn');
 const highScores = document.querySelector('.high-scores');
+const backBtn = document.querySelector('#back-btn');
+const viewScores = document.querySelector('#view-scores-btn');
 
 let processId = 0;
 let timerTime = 75;
@@ -38,12 +40,18 @@ let myQuestions = [
 ];
 
 startQuizBtn.addEventListener("click", () => {
+    timerTime = 75;
+    questionsIndex = 0;
     processId = setInterval(() => {
         timer.textContent = timerTime--
+        if (timerTime === -1) {
+            clearInterval(processId)
+            endQuiz();
+        }
     }, 1000);
-        quizIntro.setAttribute("class", "quiz-intro hidden");
-        quizQuestions.setAttribute("class", "quiz-questions visible")
-        getNewQuestion();
+    quizIntro.setAttribute("class", "quiz-intro hidden");
+    quizQuestions.setAttribute("class", "quiz-questions visible");
+    getNewQuestion();
 });
 
 function getNewQuestion() {
@@ -81,8 +89,23 @@ function endQuiz() {
     finalScore.innerHTML = timerTime + 1;
 };
 
-submitScoreBtn.addEventListener("click", function() {
+submitScoreBtn.addEventListener("click", function(event) {
+    event.preventDefault();
     localStorage.setItem('highScore', finalScore.innerHTML);
     quizEnd.setAttribute("class", "quiz-end hidden");
     highScores.setAttribute("class", "high-scores visible");
 });
+
+backBtn.addEventListener("click", function() {
+    highScores.setAttribute("class", "high-scores hidden");
+    quizIntro.setAttribute("class", "quiz-intro visible");
+});
+
+viewScores.addEventListener("click", function() {
+    quizIntro.setAttribute("class", "quiz-intro hidden");
+    quizQuestions.setAttribute("class", "quiz-questions hidden");
+    quizEnd.setAttribute("class", "quiz-end hidden");
+    highScores.setAttribute("class", "high-scores visible");
+    timer.textContent = clearInterval(processId);
+});
+
